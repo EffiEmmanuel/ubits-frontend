@@ -47,7 +47,7 @@ export default function DashboardNav({ isNavHidden, user }) {
         </li>
 
         <li className="my-16">
-          <Link to="/user/dashboard" className="flex align-middle gap-2">
+          <Link to="/user/dashboard/settings" className="flex align-middle gap-2">
             <FaCog size={16} className="my-auto" />
             <span className="my-auto text-sm">Settings</span>
           </Link>
@@ -66,7 +66,7 @@ export default function DashboardNav({ isNavHidden, user }) {
               localStorage.removeItem("token");
               redirect("/auth/login");
             }}
-            className="flex align-middle gap-2 mt-4"
+            className="flex align-middle gap-2 mt-4 cursor-pointer"
           >
             <FaSignOutAlt size={16} className="my-auto" />
             <span className="my-auto text-sm">Log out</span>

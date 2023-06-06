@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import DashboardNavbar from "../../ui/DashboardNavbar";
+import DashboardTopBar from "../../ui/DashboardTopBar";
 
 // Creating a user context to manage state
 export const UserContext = createContext();
@@ -20,7 +21,10 @@ function Dashboard(props) {
       <ToastContainer />
       <DashboardNavbar />
       {/* BODY */}
-      <div className="p-10 lg:pl-[25%] bg-white min-h-screen scrollbar-thin">{props.children}</div>
+      <div className="p-10 lg:pl-[25%] bg-white min-h-screen scrollbar-thin">
+        <DashboardTopBar />
+        {props.children}
+      </div>
     </UserContext.Provider>
   );
 }

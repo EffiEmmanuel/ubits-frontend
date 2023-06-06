@@ -10,6 +10,7 @@ import SignUpPage from "./pages/auth/SignUpPage";
 import ubitsLogo from "./assets/logos/ubits-logo.svg";
 import ProtectedRoute from "./components/security/ProtectedRoute";
 import UserDashboardPage from "./pages/user/DashboardPage";
+import UserSettingsPage from "./pages/user/SettingsPage";
 
 function App() {
   return (
@@ -25,12 +26,20 @@ function App() {
           <Route path="signup" element={<SignUpPage />} />
         </Route>
 
-        {/* Dashboard Page */}
+        {/* Dashboard Routes */}
         <Route
           path="/user/dashboard"
           element={
             <ProtectedRoute>
               <UserDashboardPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/user/dashboard/settings"
+          element={
+            <ProtectedRoute>
+              <UserSettingsPage />
             </ProtectedRoute>
           }
         />

@@ -118,7 +118,7 @@ function Homepage() {
           </div>
 
           {/* Features */}
-          <div className="flex flex-row justify-center mt-10">
+          <div className="flex flex-row justify-center mt-16">
             <div className="flex flex-col gap-y-10 lg:flex-row justify-between items-center lg:gap-x-20">
               {/* Feature */}
               <FeatureCard image={aiPoweredIcon} text="AI Powered" />
