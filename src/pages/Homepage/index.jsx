@@ -43,7 +43,7 @@ function Homepage() {
           </li>
           <li>
             <Link
-              to="/auth/register"
+              to="/auth/signup"
               className="bg-ubtisDarkBlue border-[0.5px] px-7 py-3 rounded-lg text-ubtisLightBlue border-ubtisLightBlue hover:bg-[#B4CCFECC] hover:text-white"
             >
               Sign Up

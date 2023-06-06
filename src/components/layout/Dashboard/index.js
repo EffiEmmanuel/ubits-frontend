@@ -9,6 +9,9 @@ export const UserContext = createContext();
 function Dashboard(props) {
   const [user, setUser] = useState();
 
+  // Dark mode
+  const [darkMode, setDarkMode] = useState();
+
   //   Current page
   const [currentPage, setCurrectPage] = useState("home");
 
@@ -17,11 +20,13 @@ function Dashboard(props) {
   }
 
   return (
-    <UserContext.Provider value={{ user, currentPage, setTheCurrentPage }}>
+    <UserContext.Provider
+      value={{ user, currentPage, setTheCurrentPage, darkMode, setDarkMode }}
+    >
       <ToastContainer />
       <DashboardNavbar />
       {/* BODY */}
-      <div className="p-10 lg:pl-[25%] bg-white min-h-screen scrollbar-thin">
+      <div className="p-10 lg:pl-[25%] bg-white dark:bg-ubtisDarkBlue min-h-screen scrollbar-thin">
         <DashboardTopBar />
         {props.children}
       </div>

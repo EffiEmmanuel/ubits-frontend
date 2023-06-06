@@ -54,7 +54,7 @@ function UserSettingsPage() {
       {isUserLoggedIn && (
         <Dashboard>
           {/* LATEST ACTIVITY */}
-          <section className="mt-20">
+          <section className="mt-20 dark:text-white">
             <div className="flex flex-row justify-between items-center">
               <h1
                 onClick={() => {
@@ -62,7 +62,9 @@ function UserSettingsPage() {
                   setIsBillingSettings(false);
                   setIsAccountSettings(false);
                 }}
-                className={`text-sm font-semibold ${isProfileSettings && 'underline underline-offset-8'} cursor-pointer`}
+                className={`text-sm ${isProfileSettings && "font-semibold"} ${
+                  isProfileSettings && "underline underline-offset-8"
+                } cursor-pointer`}
               >
                 Profile settings
               </h1>
@@ -72,7 +74,9 @@ function UserSettingsPage() {
                   setIsBillingSettings(true);
                   setIsAccountSettings(false);
                 }}
-                className={`text-sm font-semibold ${isBillingSettings && 'underline underline-offset-8'} py-3 cursor-pointer`}
+                className={`text-sm ${isBillingSettings && 'font-semibold'} ${
+                  isBillingSettings && "underline underline-offset-8"
+                } py-3 cursor-pointer`}
               >
                 Billing settings
               </h1>
@@ -82,7 +86,9 @@ function UserSettingsPage() {
                   setIsBillingSettings(false);
                   setIsAccountSettings(true);
                 }}
-                className={`text-sm font-semibold ${isAccountSettings && 'underline underline-offset-8'} py-3 cursor-pointer`}
+                className={`text-sm x${isAccountSettings && 'font-semibold'} ${
+                  isAccountSettings && "underline underline-offset-8"
+                } py-3 cursor-pointer`}
               >
                 Account settings
               </h1>

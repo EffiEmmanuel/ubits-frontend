@@ -19,18 +19,18 @@ export default function DashboardHome() {
   return (
     <>
       {/* LATEST ACTIVITY */}
-      <section className="mt-20">
-        <h1 className="text-xl font-bold ">My Slides</h1>
+      <section className="mt-20 dark:text-white">
+        <h1 className="text-xl font-bold dark:text-white">My Slides</h1>
 
         <div className="flex flex-wrap gap-10 mt-10">
           {slides?.length === 0 && (
-            <h2 className="mt-4">You do not have any slides yet...</h2>
+            <h2 className="mt-4 dark:text-white">You do not have any slides yet...</h2>
           )}
 
           {slides?.map((slide) => (
             <div key={slide._id}>
               <Fade up duration={800} delay={100}>
-                <div className=" mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
+                <div className=" mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue dark:text-white flex flex-col rounded-2xl">
                   <div className="w-full h-1/2">
                     <img
                       src={slide.image}
@@ -41,7 +41,7 @@ export default function DashboardHome() {
 
                   {/* Slide title and ctas */}
                   <div className="flex flex-row justify-between items-center">
-                    <h3 className="text-center font-bold">{slide.title}</h3>
+                    <h3 className="text-center font-bold dark:text-white">{slide.title}</h3>
 
                     {/* CTAs */}
                     <div className="flex items-center gap-x-3">
@@ -55,7 +55,7 @@ export default function DashboardHome() {
                   </div>
 
                   {/* Edited */}
-                  <h3 className="text-sm mt-5">Edited {slide.updatedAt}</h3>
+                  <h3 className="text-sm mt-5 dark:text-white">Edited {slide.updatedAt}</h3>
                 </div>
               </Fade>
             </div>
@@ -63,7 +63,7 @@ export default function DashboardHome() {
 
           {/* SAMPLE DATA */}
           <Fade up duration={800} delay={100}>
-            <div className=" mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
+            <div className="dark:text-white mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
               <div className="w-full h-1/2">
                 <img
                   src={slideSample}
@@ -74,7 +74,7 @@ export default function DashboardHome() {
 
               {/* Slide title and ctas */}
               <div className="flex flex-row justify-between items-center">
-                <h3 className="text-center font-bold">Sample slide</h3>
+                <h3 className="text-center font-bold dark:text-white">Sample slide</h3>
 
                 {/* CTAs */}
                 <div className="flex items-center gap-x-3">
@@ -88,12 +88,12 @@ export default function DashboardHome() {
               </div>
 
               {/* Edited */}
-              <h3 className="text-sm mt-5">Edited 3 hours ago</h3>
+              <h3 className="text-sm mt-5 dark:text-white">Edited 3 hours ago</h3>
             </div>
           </Fade>
 
           <Fade up duration={800} delay={100}>
-            <div className=" mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
+            <div className="dark:text-white mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
               <div className="w-full h-1/2">
                 <img
                   src={slideSample}
@@ -104,7 +104,7 @@ export default function DashboardHome() {
 
               {/* Slide title and ctas */}
               <div className="flex flex-row justify-between items-center">
-                <h3 className="text-center font-bold">Sample slide</h3>
+                <h3 className="text-center font-bold dark:text-white">Sample slide</h3>
 
                 {/* CTAs */}
                 <div className="flex items-center gap-x-3">
@@ -118,12 +118,12 @@ export default function DashboardHome() {
               </div>
 
               {/* Edited */}
-              <h3 className="text-sm mt-5">Edited 3 hours ago</h3>
+              <h3 className="text-sm mt-5 dark:text-white">Edited 3 hours ago</h3>
             </div>
           </Fade>
 
           <Fade up duration={800} delay={100}>
-            <div className=" mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
+            <div className="dark:text-white mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
               <div className="w-full h-1/2">
                 <img
                   src={slideSample}
@@ -134,7 +134,7 @@ export default function DashboardHome() {
 
               {/* Slide title and ctas */}
               <div className="flex flex-row justify-between items-center">
-                <h3 className="text-center font-bold">Sample slide</h3>
+                <h3 className="text-center font-bold dark:text-white">Sample slide</h3>
 
                 {/* CTAs */}
                 <div className="flex items-center gap-x-3">
@@ -148,12 +148,12 @@ export default function DashboardHome() {
               </div>
 
               {/* Edited */}
-              <h3 className="text-sm mt-5">Edited 3 hours ago</h3>
+              <h3 className="text-sm mt-5 dark:text-white">Edited 3 hours ago</h3>
             </div>
           </Fade>
 
           <Fade up duration={800} delay={100}>
-            <div className=" mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
+            <div className="dark:text-white mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
               <div className="w-full h-1/2">
                 <img
                   src={slideSample}
@@ -164,7 +164,7 @@ export default function DashboardHome() {
 
               {/* Slide title and ctas */}
               <div className="flex flex-row justify-between items-center">
-                <h3 className="text-center font-bold">Sample slide</h3>
+                <h3 className="text-center font-bold dark:text-white">Sample slide</h3>
 
                 {/* CTAs */}
                 <div className="flex items-center gap-x-3">
@@ -178,12 +178,12 @@ export default function DashboardHome() {
               </div>
 
               {/* Edited */}
-              <h3 className="text-sm mt-5">Edited 3 hours ago</h3>
+              <h3 className="text-sm mt-5 dark:text-white">Edited 3 hours ago</h3>
             </div>
           </Fade>
 
           <Fade up duration={800} delay={100}>
-            <div className=" mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
+            <div className="dark:text-white mt-5 max-w-sm md:max-w-md lg:max-w-xs text-ubtisDarkBlue flex flex-col rounded-2xl">
               <div className="w-full h-1/2">
                 <img
                   src={slideSample}
@@ -194,7 +194,7 @@ export default function DashboardHome() {
 
               {/* Slide title and ctas */}
               <div className="flex flex-row justify-between items-center">
-                <h3 className="text-center font-bold">Sample slide</h3>
+                <h3 className="text-center font-bold dark:text-white">Sample slide</h3>
 
                 {/* CTAs */}
                 <div className="flex items-center gap-x-3">
@@ -208,7 +208,7 @@ export default function DashboardHome() {
               </div>
 
               {/* Edited */}
-              <h3 className="text-sm mt-5">Edited 3 hours ago</h3>
+              <h3 className="text-sm mt-5 dark:text-white">Edited 3 hours ago</h3>
             </div>
           </Fade>
         </div>
