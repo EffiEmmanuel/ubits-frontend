@@ -57,6 +57,15 @@ function SignupFormWithOAuth() {
     // Do something
   }
 
+  // Sign up with Email
+  async function signupWithEmail() {
+    // Do something
+    axios
+      .post("", values)
+      .then((res) => {})
+      .catch((err) => {});
+  }
+
   // Formik setup
   const { values, errors, handleChange, handleSubmit } = useFormik({
     initialValues: {
@@ -226,6 +235,7 @@ function SignupFormWithOAuth() {
         {/* Log in */}
         <div className="w-full flex lg:justify-center lg:mt-10 mt-10">
           <button
+            onClick={() => signupWithEmail()}
             type="submit"
             className="bg-ubtisLightBlue text-ubtisDarkBlue h-16 w-full flex flex-row justify-center items-center gap-x-3 px-8 rounded-lg -mb-24 rounded-br-lg text-sm hover:bg-gray-700 hover:border-black"
           >
@@ -233,7 +243,7 @@ function SignupFormWithOAuth() {
               <FaSpinner className="text-white animate-spin my-auto mx-auto text-center text-lg" />
             ) : (
               <>
-                <span>Log in</span>
+                <span>Sign up</span>
                 <span>
                   <MdArrowRightAlt size={32} />
                 </span>
@@ -245,9 +255,9 @@ function SignupFormWithOAuth() {
 
       {/* Don't have an account? */}
       <p className="lg:my-0 lg:mt-24 my-28 text-center text-white">
-        Don't have an account?{" "}
-        <Link to="/auth/signup" className="text-[#4499FC]">
-          Sign up
+        Already have an account?{" "}
+        <Link to="/auth/login" className="text-[#4499FC]">
+          Log in
         </Link>
       </p>
     </form>

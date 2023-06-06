@@ -57,6 +57,15 @@ function LoginFormWithOAuth() {
     // Do something
   }
 
+  // Log in with Email
+  async function loginWithEmail() {
+    // Do something
+    axios
+      .post("", values)
+      .then((res) => {})
+      .catch((err) => {});
+  }
+
   // Formik setup
   const { values, errors, handleChange, handleSubmit } = useFormik({
     initialValues: {
@@ -180,6 +189,7 @@ function LoginFormWithOAuth() {
         {/* Log in */}
         <div className="w-full flex lg:justify-center lg:mt-10 mt-10">
           <button
+            onClick={() => loginWithEmail()}
             type="submit"
             className="bg-ubtisLightBlue text-ubtisDarkBlue h-16 w-full flex flex-row justify-center items-center gap-x-3 px-8 rounded-lg -mb-24 rounded-br-lg text-sm hover:bg-gray-700 hover:border-black"
           >
